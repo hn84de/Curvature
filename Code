@@ -1,0 +1,31 @@
+var data = ""; /*<----Put the data here*/
+
+var array = data.split(",");
+
+var num = (array.length)/3;
+
+var latitude = [];
+
+var longitude = [];
+
+for(let i = 0; i<num; i++){
+    latitude[i] = array[3*i];
+    longitude[i] = array[1+(3*i)];
+}
+
+function angle(n){
+    return Math.atan((longitude[n+1]-longitude[n])/(latitude[n+1]-latitude[n]));
+}
+
+function angle_change(n){
+    return angle(n+1)-angle[n];
+}
+
+function distance(n){
+    let x_change = latitude[n+1]-latitude[n];
+    let y_change = longitude[n+1]-longitude[n];
+    let x_change_squared = (x_change)*(x_change);
+    let y_change_squared = (y_change)*(y_change);
+    let sum = x_change_squared + y_change_squared;
+    return Math.sqrt(sum);
+}
