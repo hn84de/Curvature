@@ -250,3 +250,268 @@ for(let i = 0; i<num; i++){
     }
     return total/den;
 }
+'47.57622'
+var data = "-122.29396,47.57594,0,-122.29396,47.57595,0,-122.29392,47.57597,0,-122.29388,47.57599,0,-122.29385,47.57601,0,-122.29383,47.57602,0,-122.29383,47.57603,0,-122.29381,47.57606,0,-122.29373,47.57616,0,-122.29361,47.57635,0,-122.29351,47.57646,0,-122.29346,47.5765,0,-122.29342,47.57654,0,-122.2934,47.57656,0,-122.29335,47.57659,0,-122.29331,47.57661,0,-122.29326,47.57663,0,-122.29322,47.57664,0,-122.29315,47.57666,0,-122.29312,47.57667,0,-122.29308,47.57667,0,-122.29303,47.57668,0,-122.29301,47.57668,0,-122.29286,47.57666,0,-122.29275,47.57664,0,-122.2927,47.57663,0,-122.29267,47.57661,0,-122.29264,47.5766,0,-122.29261,47.57658,0,-122.29258,47.57656,0,-122.29255,47.57655,0,-122.29254,47.57653,0,-122.29253,47.57653,0,-122.29249,47.57649,0,-122.29245,47.57645,0,-122.29241,47.57642,0,-122.29236,47.57638,0,-122.29231,47.57635,0,-122.29228,47.57633,0,-122.29218,47.57627,0,-122.2921,47.57624,0,-122.29201,47.57619,0,-122.29195,47.57617,0,-122.29189,47.57615,0,-122.29184,47.57614,0,-122.29179,47.57613,0,-122.29173,47.57612,0,-122.2916,47.5761,0,-122.29152,47.5761,0,-122.29144,47.5761,0,-122.29136,47.5761,0,-122.29127,47.5761,0,-122.29116,47.57611,0,-122.2911,47.57612,0,-122.29105,47.57613,0,-122.291,47.57613,0,-122.29097,47.57614,0,-122.29092,47.57615,0,-122.29078,47.57623,0,-122.29076,47.57623,0,-122.2907,47.57625,0,-122.29065,47.57628,0,-122.29059,47.57631,0,-122.29053,47.57634,0,-122.29048,47.57637,0,-122.29042,47.57642,0,-122.29036,47.57647,0,-122.29026,47.57656,0,-122.29016,47.57665,0,-122.29014,47.57666,0,-122.29012,47.57667,0,-122.29007,47.5767,0,-122.28995,47.57678,0,-122.28982,47.5768,0,-122.28977,47.57682,0,-122.28972,47.57683,0,-122.28964,47.57685,0,-122.28959,47.57686,0,-122.28953,47.57686,0,-122.28944,47.57687,0,-122.28931,47.57688,0,-122.28923,47.57688,0,-122.28907,47.57689,0,-122.28912,47.57707,0,-122.28914,47.57716,0,-122.2892,47.57716,0,-122.28926,47.57715,0,-122.28937,47.57715,0,-122.28947,47.57714,0,-122.28954,47.57714,0,-122.28964,47.57713,0,-122.28973,47.57712,0,-122.28981,47.5771,0,-122.28993,47.57708,0,-122.29002,47.57705,0,-122.29015,47.577,0,-122.29023,47.57697,0,-122.29031,47.57692,0,-122.29045,47.57684,0,-122.29072,47.5766,0,-122.29077,47.57657,0,-122.29086,47.57651,0,-122.29098,47.57645,0,-122.29101,47.57643,0,-122.29102,47.57643,0,-122.29105,47.57642,0,-122.29109,47.57641,0,-122.29112,47.57641,0,-122.29115,47.5764,0,-122.29118,47.5764,0,-122.29126,47.5764,0,-122.29135,47.57639,0,-122.29141,47.57639,0,-122.29149,47.5764,0,-122.29156,47.57641,0,-122.29161,47.57642,0,-122.29167,47.57643,0,-122.29173,47.57644,0,-122.29176,47.57645,0,-122.29178,47.57646,0,-122.29181,47.57647,0,-122.29187,47.5765,0,-122.29193,47.57652,0,-122.29205,47.57659,0,-122.29206,47.5766,0,-122.29217,47.57669,0,-122.29221,47.57672,0,-122.29224,47.57674,0,-122.29231,47.57679,0,-122.29238,47.57682,0,-122.29243,47.57685,0,-122.29247,47.57687,0,-122.29253,47.57689,0,-122.29257,47.5769,0,-122.29264,47.57692,0,-122.29272,47.57694,0,-122.2928,47.57694,0,-122.29285,47.57695,0,-122.293,47.57695,0,-122.29312,47.57695,0,-122.29313,47.57695,0,-122.29327,47.57694,0,-122.29334,47.57693,0,-122.29344,47.5769,0,-122.29354,47.57686,0,-122.29357,47.57685,0,-122.29365,47.57681,0,-122.29374,47.57675,0,-122.29379,47.57671,0,-122.29384,47.57667,0,-122.2939,47.57661,0,-122.29397,47.57654,0,-122.29401,47.5765,0,-122.29414,47.57638,0,-122.29415,47.57622,0";
+
+var dataAsArray = data.split(",");
+
+var num = (dataAsArray.length)/3;
+
+function getnum(){
+  return num;
+}
+
+var longitude = [];
+
+var latitude = [];
+
+for(let i = 0; i<num; i++){
+  latitude[i] = dataAsArray[3*i];
+  longitude[i] = dataAsArray[1+(3*i)];
+}
+
+function getLatitude(n){
+  return latitude[n];
+}
+
+function getLongitude(n){
+  return longitude[n];
+}
+
+function angle(n){
+  return Math.atan((longitude[n+1]-longitude[n])/(latitude[n+1]-latitude[n]));
+}
+
+
+
+function anglechange(n){
+  return Math.sqrt((angle(n+1)-angle(n))*(angle(n+1)-angle(n)));
+}
+
+function distance(n){
+  let xc = latitude[n+1]-latitude[n];
+  let yc = longitude[n+1]-longitude[n];
+  return Math.sqrt(((xc)*(xc))+((yc)*(yc)));
+}
+
+function curvature(n){
+return anglechange(n)/distance(n);
+}
+
+function averagecurvature(n){
+  let sum = 0;
+  for(let i = 0; i<n; i++){
+    sum += curvature(i);
+  }
+  return sum/n;
+}
+
+function threen(s,n){
+    let a = 0;
+    let b = 0;
+    let c = 0;
+    for(let i = 0; i<n; i+=s){
+        a = i;
+        b = i+s;
+    }
+    c = n-a;
+    let array = {a,b,c};
+    return array;
+}
+
+function threenarr(s, n){
+    let array = [];
+    array[0] = Number(latitude[threen(s, n).a]);
+    array[1] = Number(latitude[threen(s, n).b]);
+    array[2] = (latitude[threen(s, n).b]-latitude[threen(s, n).a])/s;
+    array[3] = ((latitude[threen(s, n).b]-latitude[threen(s, n).a])/s)*(threen(s, n).c);
+    array[4] = Number(array[3])+Number(array[0]);
+    return array;
+}
+
+function threenarry(s, n){
+    let array = [];
+    array[0] = Number(longitude[threen(s, n).a]);
+    array[1] = Number(longitude[threen(s, n).b]);
+    array[2] = (longitude[threen(s, n).b]-longitude[threen(s, n).a])/s;
+    array[3] = ((longitude[threen(s, n).b]-longitude[threen(s, n).a])/s)*(threen(s, n).c);
+    array[4] = Number(array[3])+Number(array[0]);
+    return array;
+}
+
+function alternatex(s){
+    let array = [];
+    for(let i = 0; i<num; i++){
+        try{
+        array[i] = threenarr(s, i)[4];
+            }catch(error){
+            let h = 0;
+            }
+    }
+    return array;
+}
+
+
+function alternatey(s){
+    let array = [];
+    for(let i = 0; i<num; i++){
+        try{
+        array[i] = threenarry(s, i)[4];
+            }catch(error){
+            let h = 0;
+            }
+    }
+    return array;
+}
+
+function getalternatex(s, n){
+  return alternatex(s)[n];
+}
+
+function getalternatey(s, n){
+  return alternatey(s)[n];
+}
+
+function anglet(s, n){
+    return Math.atan((getalternatey(s, n+1)-getalternatey(s, n))/(getalternatex(s, n+1)-getalternatex(s, n)));
+}
+
+function anglechanget(s, n){
+  return Math.sqrt((anglet(s, n+1)-anglet(s, n))*(anglet(s, n+1)-anglet(s, n)));
+}
+
+function distancet(s, n){
+  let xc = getalternatex(s, n+1)-getalternatex(s, n);
+  let yc = getalternatey(s, n+1)-getalternatey(s, n);
+  return Math.sqrt(((xc)*(xc))+((yc)*(yc)));
+}
+
+function curvaturet(s, n){
+return anglechanget(s, n)/distance(s, n);
+}
+
+function averagecurvaturet(s, n){
+  let sum = 0;
+  for(let i = 0; i<n; i++){
+    sum += curvaturet(s, i);
+  }
+  return sum/n;
+}
+
+function fordesmos(stepsize){
+    let string = "";
+    for(let i = 0; i<num-1; i++){
+        try{
+            if(String(getalternatex(stepsize, i)) != "undefined" && String(getalternatey(stepsize, i)) != "undefined" && String(getalternatey(stepsize, i)) != "NaN" && String(getalternatex(stepsize, i)) != "NaN"){string += `(${getalternatex(stepsize, i)},${getalternatey(stepsize, i)}),`;}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    try{
+        if(String(getalternatex(stepsize, i)) != "undefined" && String(getalternatey(stepsize, i)) != "undefined" && String(getalternatey(stepsize, i)) != "NaN" && String(getalternatex(stepsize, i)) != "NaN"){string += `(${getalternatex(stepsize, i)},${getalternatey(stepsize, i)}),`;}else{let z = 0;};
+    }catch(error){
+        let z = 0;
+    }
+    let a = "";
+    if(string[string.length-1] == ","){
+        for(let i = 0; i<string.length-1; i++){
+            a += string[i];
+        }
+    }else{
+        a = string;
+    }
+    console.log(a);
+}
+
+function totaldistancet(s){
+    let total = 0;
+for(let i = 0; i<num; i++){
+        try{
+            if(String(distancet(s, i)) != "undefined" && String(distancet(s, i)) != "NaN"){total += distancet(s, i);}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    return total;
+}
+
+function totaldistancetn(s, n){
+    let total = 0;
+for(let i = 0; i<n; i++){
+        try{
+            if(String(distancet(s, i)) != "undefined" && String(distancet(s, i)) != "NaN"){total += distancet(s, i);}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    return total;
+}
+
+function totalcurvaturet(s, n){
+    let total = 0;
+for(let i = 0; i<n; i++){
+        try{
+            if(String(curvaturet(s, i)) != "undefined" && String(curvaturet(s, i)) != "NaN"){total += curvaturet(s, i);}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    return total;
+}
+
+function totalcurvaturetavg(s, n){
+    let total = 0;
+    let den = 0;
+for(let i = 0; i<n; i++){
+        try{
+            if(String(curvaturet(s, i)) != "undefined" && String(curvaturet(s, i)) != "NaN"){total += curvaturet(s, i); den ++;}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    return total/den;
+}
+
+function totalcurvaturett(s){
+    let total = 0;
+for(let i = 0; i<num; i++){
+        try{
+            if(String(curvaturet(s, i)) != "undefined" && String(curvaturet(s, i)) != "NaN"){total += curvaturet(s, i);}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    return total;
+}
+
+function totalcurvaturetavgt(s){
+    let total = 0;
+    let den = 0;
+for(let i = 0; i<num; i++){
+        try{
+            if(String(curvaturet(s, i)) != "undefined" && String(curvaturet(s, i)) != "NaN"){total += curvaturet(s, i); den ++;}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    return total/den;
+}
+
+function totaldistancettn(s){
+    return totaldistancetn(s, num);
+}
+
+function totalcurvaturettn(s){
+    return totalcurvaturet(s, num);
+}
+
+totalcurvatureavgttn(s){
+    return (totalcurvaturettn(s))/num;
+}
