@@ -212,15 +212,16 @@ for(let i = 0; i<n; i++){
 
 function totalcurvaturetavg(s, n){
     let total = 0;
+    let den = 0;
 for(let i = 0; i<n; i++){
         try{
-            if(String(curvaturet(s, i)) != "undefined" && String(curvaturet(s, i)) != "NaN"){total += curvaturet(s, i);}else{let z = 0;};
+            if(String(curvaturet(s, i)) != "undefined" && String(curvaturet(s, i)) != "NaN"){total += curvaturet(s, i); den ++;}else{let z = 0;};
             
         }catch(error){
             let z = 0;
                          }
     }
-    return total/n;
+    return total/den;
 }
 
 function totalcurvaturett(s){
@@ -238,13 +239,14 @@ for(let i = 0; i<num; i++){
 
 function totalcurvaturetavgt(s){
     let total = 0;
-for(let i = 0; i<n; i++){
+    let den = 0;
+for(let i = 0; i<num; i++){
         try{
-            if(String(curvaturet(s, i)) != "undefined" && String(curvaturet(s, i)) != "NaN"){total += curvaturet(s, i);}else{let z = 0;};
+            if(String(curvaturet(s, i)) != "undefined" && String(curvaturet(s, i)) != "NaN"){total += curvaturet(s, i); den ++;}else{let z = 0;};
             
         }catch(error){
             let z = 0;
                          }
     }
-    return total/num;
+    return total/den;
 }
