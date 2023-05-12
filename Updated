@@ -124,7 +124,7 @@ function anglet(s, n){
 }
 
 function anglechanget(s, n){
-  return Math.sqrt((anglet(s, n+1)-angle(s, n))*(angle(s, n+1)-angle(s, n)));
+  return Math.sqrt((anglet(s, n+1)-anglet(s, n))*(anglet(s, n+1)-anglet(s, n)));
 }
 
 function distancet(s, n){
@@ -169,4 +169,82 @@ function fordesmos(stepsize){
         a = string;
     }
     console.log(a);
+}
+
+function totaldistancet(s){
+    let total = 0;
+for(let i = 0; i<num; i++){
+        try{
+            if(String(distancet(s, i)) != "undefined" && String(distancet(s, i)) != "NaN"){total += distancet(s, i);}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    return total;
+}
+
+function totaldistancetn(s, n){
+    let total = 0;
+for(let i = 0; i<n; i++){
+        try{
+            if(String(distancet(s, i)) != "undefined" && String(distancet(s, i)) != "NaN"){total += distancet(s, i);}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    return total;
+}
+
+function totalcurvaturet(s, n){
+    let total = 0;
+for(let i = 0; i<n; i++){
+        try{
+            if(String(curvaturet(s, i)) != "undefined" && String(curvaturet(s, i)) != "NaN"){total += curvaturet(s, i);}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    return total;
+}
+
+function totalcurvaturetavg(s, n){
+    let total = 0;
+for(let i = 0; i<n; i++){
+        try{
+            if(String(curvaturet(s, i)) != "undefined" && String(curvaturet(s, i)) != "NaN"){total += curvaturet(s, i);}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    return total/n;
+}
+
+function totalcurvaturett(s){
+    let total = 0;
+for(let i = 0; i<num; i++){
+        try{
+            if(String(curvaturet(s, i)) != "undefined" && String(curvaturet(s, i)) != "NaN"){total += curvaturet(s, i);}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    return total;
+}
+
+function totalcurvaturetavgt(s){
+    let total = 0;
+for(let i = 0; i<n; i++){
+        try{
+            if(String(curvaturet(s, i)) != "undefined" && String(curvaturet(s, i)) != "NaN"){total += curvaturet(s, i);}else{let z = 0;};
+            
+        }catch(error){
+            let z = 0;
+                         }
+    }
+    return total/num;
 }
