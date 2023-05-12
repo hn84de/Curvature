@@ -168,5 +168,5 @@ function fordesmos(stepsize){
     }else{
         a = string;
     }
-    return a;
+    console.log(a);
 }
