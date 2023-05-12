@@ -387,7 +387,7 @@ function distancet(s, n){
 }
 
 function curvaturet(s, n){
-return anglechanget(s, n)/distance(s, n);
+return anglechanget(s, n)/distancet(s, n);
 }
 
 function averagecurvaturet(s, n){
